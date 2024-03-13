@@ -70,7 +70,8 @@ void heapifyDown(int printer_id, int index) {
 
 HeapNode extractMax(int printer_id) { // return id
     if (P[printer_id].count == 0) {
-        return {-1, -1};
+        HeapNode tmp_N = {-1, -1};
+        return tmp_N;
     }
 
     HeapNode tmp_N = P[printer_id].arr[0];

@@ -20,8 +20,8 @@ BinomialNode *MakeBinomialHeap() {
 }
 
 int BinomialHeapMaximum(BinomialNode* H){
-    binomial_node* temp = H;
-    binomial_node* max_node = NULL; // the node with maximum
+    BinomialNode* temp = H;
+    BinomialNode* max_node = NULL; // the node with maximum
     int max = -1; // maximum
     while(temp != NULL){
         if(temp->key > max){
@@ -124,10 +124,10 @@ BinomialNode *BinomialHeapExtractMax(BinomialNode* H){
         printf("no documents in queue\n");
         return H;
     }
-    binomial_node* temp = H;
-    binomial_node* prev = NULL;
-    binomial_node* max_node = NULL; // the node with maximum
-    binomial_node* max_prev = NULL; // the node before max_node
+    BinomialNode* temp = H;
+    BinomialNode* prev = NULL;
+    BinomialNode* max_node = NULL; // the node with maximum
+    BinomialNode* max_prev = NULL; // the node before max_node
     int max = -1; // maximum
     while(temp != NULL){
         if(temp->key > max){
