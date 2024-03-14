@@ -1,7 +1,7 @@
 {
     "name": "[HW2.P3] Printer",
     "timeLimit": 3,
-    "memLimit": 65536,
+    "memLimit": 262144,
     "testdata": [
         {
             "points": 0,
