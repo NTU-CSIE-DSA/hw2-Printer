@@ -119,10 +119,23 @@ int main(){
             int printer_id1, printer_id2;
             scanf("%d%d", &printer_id1, &printer_id2);
             // printf("move %d %d\n", printer_id1, printer_id2);
+            int swap = 0;
+            if(P[printer_id1].count > P[printer_id2].count){
+                int tmp = printer_id1;
+                printer_id1 = printer_id2;
+                printer_id2 = tmp;
+                swap = 1;
+            }
             while(1){
                 HeapNode re = extractMax(printer_id1);
                 if(re.key == -1) break;
                 insert(printer_id2, re.key, re.id);
+            }
+            if(swap == 1){
+                printer tmp_P = P[printer_id1];
+                P[printer_id1] = P[printer_id2];
+                P[printer_id2] = tmp_P;
+                printer_id2 = printer_id1;
             }
             printf("%d jobs waiting on printer %d after moving\n", P[printer_id2].count, printer_id2);
         }
