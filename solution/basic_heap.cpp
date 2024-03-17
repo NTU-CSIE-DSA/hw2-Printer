@@ -132,7 +132,7 @@ int main(){
                 insert(printer_id2, re.key, re.id);
             }
             if(swap == 1){
-                Printer tmp_P = P[printer_id1];
+                printer tmp_P = P[printer_id1];
                 P[printer_id1] = P[printer_id2];
                 P[printer_id2] = tmp_P;
                 printer_id2 = printer_id1;
