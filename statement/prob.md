@@ -1,7 +1,10 @@
-# DSA HW2 programmimg 1 draft
+## Problem Description
 
-Problem Description 和其他部份先參考以前的作業：
-https://www.csie.ntu.edu.tw/~htlin/course/dsa14spring/hw5/hw5.pdf
+In this problem, we ask you to design a system to emulate the job queues of several printers. This system needs to support the following three operations: 
+
+- Add Operation: Insert a job into the printer's queue.
+- Print Operation: Print the document with the highest priority from the queue. This is a typical need for the priority queue (i.e. what the binary heap is designed for).
+- Move Operation: Transfer all jobs from one printer to another. This happens when one printer "fails'' for some reason, such as running out of paper or toner.
 
 ### Inputs
 
@@ -27,42 +30,42 @@ For each **move** operation, a line is printed indicating the number of jobs wai
 ### Constraints
 
 - $1\le N,M\le 10^6$
-- $1\le\text{printer_id, printer_id1, printer_id2}\le N$
-- $1\le\text{job_id, priority}\le 10^9$
+- $1\le\text{printer\_id, printer\_id1, printer\_id2}\le N$
+- $1\le\text{job\_id, priority}\le 10^9$
 
 It is guaranteed that all priority values and job IDs will be distinct, and all operations will be legal (i.e., all IDs will be within the specified range).
 
-### Subtask 
+## Subtask 
 
-#### Subtask 1 (15 pts)
+### Subtask 1 (15 pts)
 
 - $N=1$
 - There are no move operation, which means that the task can be solved with the basic heap taught in class. 
 
-#### Subtask 2 (15 pts)
+### Subtask 2 (15 pts)
 
 - $1\le N,M\le 5000$
 
 (不需要用mergable heap也可以過)
 
-#### Subtask 3 (70 pts)
+### Subtask 3 (70 pts)
 
 - no other constraints
 
-### Sample Test Cases
+## Sample Test Cases
 
-#### Sample Input 1
+### Sample Input 1
 
 ```
 1 5
-add 1 1 1
-add 2 2 1
-print 1
-print 1
-print 1
+1 1 1 1
+1 2 2 1
+2 1
+2 1
+2 1
 ```
 
-#### Sample Output 1
+### Sample Output 1
 
 ```
 1 jobs waiting on printer 1
@@ -72,28 +75,28 @@ print 1
 no documents in queue
 ```
 
-#### Sample Input 2
+### Sample Input 2
 
 ```
 2 15
-add 1 5 1
-add 2 4 1
-add 3 3 1
-add 4 2 2
-add 5 1 2
-move 1 2
-print 1
-print 2
-print 2
-move 2 1
-print 2
-print 1
-print 1
-print 1
-print 1
+1 1 5 1
+1 2 4 1
+1 3 3 1
+1 4 2 2
+1 5 1 2
+3 1 2
+2 1
+2 2
+2 2
+3 2 1
+2 2
+2 1
+2 1
+2 1
+2 1
 ```
 
-#### Sample Output 2
+### Sample Output 2
 
 ```
 1 jobs waiting on printer 1

@@ -1,5 +1,12 @@
 {
   "sol.cpp": {
     "verdict": "model_solution"
+  },
+  "heuristic_merge_heap.cpp": {
+    "verdict": "accept"
+  },
+  "basic_heap.cpp": {
+    "verdict": "time_limit",
+    "except": {"s0": "correct", "s1": "correct", "s2": correct}
   }
 }
