@@ -7,6 +7,6 @@
   },
   "basic_heap.cpp": {
     "verdict": "time_limit",
-    "except": {"s0": "correct", "s1": "correct", "s2": correct}
+    "except": {"s0": "correct", "s1": "correct", "s2": "correct"}
   }
 }
