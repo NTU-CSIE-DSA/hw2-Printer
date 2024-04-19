@@ -1,4 +1,5 @@
-# [HW2.P3] Printer Tutorial (題目名稱暫定)
+# [HW2.P3] Printing Queue Tutorial
+
 <!-- 文字敘述如何實作 -->
 Keywords: `binomial heap`, `linked list`, `mergeable heap`
 
