@@ -15,11 +15,11 @@ Keywords: `binomial heap`, `linked list`, `mergeable heap`
 #define MAX_M 1000001
 
 typedef struct binomial_node {
-    int key; 											// priority of printer
-    int id; 											// printer id
-    int degree; 									// degree of binomial heap
+    int key;                      // priority of printer
+    int id;                       // printer id
+    int degree;                   // degree of binomial heap
     struct binomial_node *parent;
-    struct binomial_node *child;	// pointer of first child
+    struct binomial_node *child;  // pointer of first child
     struct binomial_node *sibling;
 } BinomialNode;
 
@@ -28,9 +28,9 @@ BinomialNode *MakeBinomialHeap() {
 }
 
 int BinomialHeapMaximum(BinomialNode* H){
-    BinomialNode* temp = H; 				// temp node to traversal the binomial heap
-    BinomialNode* max_node = NULL; 	// the node with maximum
-    int max = -1; 									// maximum
+    BinomialNode* temp = H;         // temp node to traversal the binomial heap
+    BinomialNode* max_node = NULL;  // the node with maximum
+    int max = -1;                   // maximum
     while(temp != NULL){
         if(temp->key > max){
             max_node = temp;
@@ -86,8 +86,8 @@ BinomialNode *BinomialHeapMerge(BinomialNode* H1, BinomialNode* H2){
 BinomialNode *BinomialHeapUnion(BinomialNode* H1, BinomialNode* H2){
     BinomialNode *H = BinomialHeapMerge(H1, H2);
     if(H == NULL) return H;
-    BinomialNode *prev = NULL;					// previous node
-    BinomialNode *curr = H;							// current node
+    BinomialNode *prev = NULL;          // previous node
+    BinomialNode *curr = H;             // current node
     BinomialNode *next = curr->sibling; // next node
     while(next != NULL){
         if((curr->degree != next->degree) || (next->sibling != NULL && curr->degree == next->sibling->degree)){
@@ -173,7 +173,7 @@ BinomialNode *BinomialHeapExtractMax(BinomialNode* H){
 
 typedef struct Printer{
     BinomialNode *heap; // each printer is a binomial heap
-    int count;					// how many jobs in this printer
+    int count;          // how many jobs in this printer
 }printer;
 
 printer P[MAX_N];
