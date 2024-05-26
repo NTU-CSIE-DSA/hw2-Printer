@@ -3,7 +3,7 @@
 <!-- 文字敘述如何實作 --> 
 Keywords: `binomial heap`, `linked list`, `mergeable heap`
 
-## sample code
+## Sample Code
 <!-- 註解函數、幾個重要變數在幹嘛 --> 
 
 ```c
@@ -218,7 +218,7 @@ int main() {
 }
 ```
 
-## common mistakes
+## Common Mistakes
 <!-- 寫幾個常見錯誤 --> 
 
 You should consider three scenarios in the `BinomialHeapUnion` function:
