@@ -33,7 +33,7 @@ int BinomialHeapMaximum(BinomialNode* H) {  // find the maximun of the binomial 
     return max;
 }
 
-// make binomial heap `y` be the first child of `z`
+// Make binomial heap `y` be the first child of `z`
 void BinomialLink(BinomialNode* y, BinomialNode* z) {
     y -> parent = z;
     y -> sibling = z -> child;
@@ -42,7 +42,7 @@ void BinomialLink(BinomialNode* y, BinomialNode* z) {
     return;
 }
 
-// merge binomial heap `H1`, `H2` into an ordered linked list (sorted by degree)
+// Merge binomial heap `H1`, `H2` into an ordered linked list (sorted by degree)
 BinomialNode *BinomialHeapMerge(BinomialNode* H1, BinomialNode* H2) {
     if (H1 == NULL) return H2;
     if (H2 == NULL) return H1;
@@ -80,7 +80,7 @@ BinomialNode *BinomialHeapMerge(BinomialNode* H1, BinomialNode* H2) {
     return head;
 }
 
-// union the two binomial heap `H1`,`H2`
+// Union the two binomial heap `H1`,`H2`
 BinomialNode *BinomialHeapUnion(BinomialNode* H1, BinomialNode* H2) {
     BinomialNode *H = BinomialHeapMerge(H1, H2);
     if(H == NULL) return H;
@@ -113,7 +113,7 @@ BinomialNode *BinomialHeapUnion(BinomialNode* H1, BinomialNode* H2) {
     return H;
 }
 
-// insert a job with (job_id, priority) = (`id`, `key`) to the binomial heap `H`
+// Insert a job with (job_id, priority) = (`id`, `key`) to the binomial heap `H`
 BinomialNode *BinomialHeapInsert(BinomialNode* H, int key, int id) {
     BinomialNode *new_node = (BinomialNode *) malloc(sizeof(BinomialNode));
     new_node -> key = key;
@@ -126,7 +126,7 @@ BinomialNode *BinomialHeapInsert(BinomialNode* H, int key, int id) {
     return H;
 }
 
-// remove the node with maximum key in binomial heap `H`
+// Remove the node with maximum key in binomial heap `H`
 BinomialNode *BinomialHeapExtractMax(BinomialNode* H) {
     if(H == NULL) {
         printf("no documents in queue\n");
